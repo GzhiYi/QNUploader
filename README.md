@@ -1,4 +1,4 @@
-### 七牛图片上传扩展
+### 七牛图片上传扩展(Jquery) [VUE实现](https://github.com/GzhiYi/QNUploader/tree/vue)
 #### 写在前
 扩展没办法上传，因为注册chrome开发者要5$的费用，但是我没法支付。所以有些可惜了。如果可以支付的可以联系我！
 ![TIM截图20180709092842](http://p7b9iw239.bkt.clouddn.com/TIM截图20180709092842.png)  
