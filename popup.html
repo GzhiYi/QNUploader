@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>QNUploader</title>
+    <meta content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="logo">
+        <img src="/icon.png" alt="logo" style="width: 40px; height: 40px;">
+      </div>
+      <form class="ui form">
+        <div class="field">
+          <label>Token</label>
+          <input type="text" name="token" v-model="token" @blur="onTokenBlur">
+          <div class="token-message ui pointing label" v-show="showTokenError">
+            Please enter your upload token
+          </div>
+        </div>
+        <div class="field">
+          <label>Domain</label>
+          <input type="text" name="domain" v-model="domain" @blur="onDomainBlur">
+          <div class="result-message ui pointing label" v-show="showDomainError">
+            Please enter your default domain
+          </div>
+        </div>
+        <div>
+          <label for="file" :class="token === '' || domain === '' ? 'ui icon button disabled' : 'ui icon button'">Upload</label>
+          <input type="file" id="file" style="display:none" @change="onFileChange">
+        </div>
+      </form>
+      <div :class="showResult ? 'result ui message' : 'result ui message hide'" style="margin: 20px 20px 10px 20px;">
+        <div class="header">
+          Result
+        </div>
+        <p>{{resultUrl}}</p>
+        <p>{{resultMd}}</p>
+        <div class="result-outer">
+          <div class="result-preview ui small image">
+            <img :src="resultUrl" alt="preview">
+          </div>
+        </div>
+      </div>
+      <div :class="errorMsg === '' ? 'error-display ui error message transition hidden' : 'error-display ui error message transition'" style="margin: 0 20px 20px 20px;">
+        <div class="header">
+          Upload error!
+        </div>
+        <p class="error-msg">
+          {{errorMsg}}
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="/js/vue.min.js"></script>
+  <script src="/js/qiniu.min.js"></script>
+  <script src="/js/mainScript.js"></script>
+</html>
