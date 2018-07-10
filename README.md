@@ -5,15 +5,16 @@
 目的是创建一个上传图片到图床的工具，方便通过markdown引用。
 
 #### 使用
-![TIM截图20180710154500](http://p7b9iw239.bkt.clouddn.com/TIM截图20180710154500.png)
+![TIM截图20180710154500](http://p7b9iw239.bkt.clouddn.com/TIM截图20180710154500.png)  
 当然，使用还是可以的，可以在本地通过开发加载解压的扩展文件就可以用了。  
 ```bash
 git clone git@github.com:GzhiYi/QNUploader.git
 ```
-以上将源码下载到本地。在chrome上点菜单，更多工具，扩展程序，然后选择加载已解压的扩展程序，然后就可以在右上角的扩展进行图片上传了。  
-[token获取](http://jsfiddle.net/b0zt725o/3/)  
-bucketName获取：打开七牛云，tab上面的名字就是bucketName，  
-Domain获取：打开七牛云，选择内容管理，外链默认域名就是这个Domain啦。  
+将源码下载到本地。在chrome上点菜单，更多工具，扩展程序，然后选择加载已解压的扩展程序，然后就可以在右上角的扩展进行图片上传了。
+图片上传需要七牛云的图床配置，没有的可以去注册创建。注册完可以获取如下信息： 
+- token获取：[点击](http://jsfiddle.net/b0zt725o/3/)  
+- bucketName获取：打开七牛云，tab上面的名字就是bucketName，  
+- Domain获取：打开七牛云，选择内容管理，外链默认域名就是这个Domain啦。  
 填写完就可以直接上传了。  
 ![TIM截图20180710154548](http://p7b9iw239.bkt.clouddn.com/TIM截图20180710154548.png)
 
@@ -25,3 +26,5 @@ Domain获取：打开七牛云，选择内容管理，外链默认域名就是�
 ```bash
 "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 ```
+
+#### 功能不断开发...
