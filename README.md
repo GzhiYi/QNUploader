@@ -5,8 +5,7 @@
 目的是创建一个上传图片到图床的工具，方便通过markdown引用。
 
 #### 使用
-
-![TIM截图20180709102628](http://p7b9iw239.bkt.clouddn.com/TIM截图20180709102628.png)  
+![TIM截图20180710154500](http://p7b9iw239.bkt.clouddn.com/TIM截图20180710154500.png)
 当然，使用还是可以的，可以在本地通过开发加载解压的扩展文件就可以用了。  
 ```bash
 git clone git@github.com:GzhiYi/QNUploader.git
@@ -16,7 +15,7 @@ git clone git@github.com:GzhiYi/QNUploader.git
 bucketName获取：打开七牛云，tab上面的名字就是bucketName，  
 Domain获取：打开七牛云，选择内容管理，外链默认域名就是这个Domain啦。  
 填写完就可以直接上传了。  
-![new](http://p7b9iw239.bkt.clouddn.com/new.png)
+![TIM截图20180710154548](http://p7b9iw239.bkt.clouddn.com/TIM截图20180710154548.png)
 
 #### 注意
 使用vue开发chrome扩展会遇到没有内容渲染出来的问题：  
