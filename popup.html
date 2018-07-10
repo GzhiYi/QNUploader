@@ -32,11 +32,20 @@
         </div>
       </form>
       <div :class="showResult ? 'result ui message' : 'result ui message hide'" style="margin: 20px 20px 10px 20px;">
-        <div class="header">
-          Result
+        <div class="header result-header" style="text-align: center;">
+          Click to copy
         </div>
-        <p>{{resultUrl}}</p>
-        <p>{{resultMd}}</p>
+        <!-- <p>{{resultUrl}}</p>
+        <p>{{resultMd}}</p> -->
+        <div class="ui buttons copy-btn">
+          <button class="ui button" v-clipboard:copy="resultUrl" v-clipboard:success="onCopyUrl" v-clipboard:error="onError">Url</button>
+          <button class="ui button" v-clipboard:copy="resultMd" v-clipboard:success="onCopyMd" v-clipboard:error="onError">MarkDown</button>
+        </div>
+        <div style="text-align: center; margin-bottom: 10px;">
+          {{isCopyUrl ? 'Url Copied' : ''}}
+          {{isCopyMd ? 'MarkDown Copied' : ''}}
+        </div>
+        
         <div class="result-outer">
           <div class="result-preview ui small image">
             <img :src="resultUrl" alt="preview">
@@ -55,5 +64,7 @@
   </body>
   <script src="/js/vue.min.js"></script>
   <script src="/js/qiniu.min.js"></script>
+  <script src="/js/vue-clipboard.min.js"></script>
   <script src="/js/mainScript.js"></script>
+  
 </html>

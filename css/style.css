@@ -1,3 +1,6 @@
+html, body {
+  height: auto;
+}
 .logo {
   display: flex;
   justify-content: center;
@@ -16,6 +19,7 @@ form.ui.form {
   align-items: center;
   justify-content: center;
 }
-html, body {
-  height: auto;
+.ui.buttons.copy-btn {
+  display: flex;
+  margin: 10px;
 }

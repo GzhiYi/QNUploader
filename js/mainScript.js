@@ -1,3 +1,4 @@
+console.log('window', window)
 new Vue({
   el: '#root',
   data: {
@@ -8,7 +9,9 @@ new Vue({
     errorMsg: '',
     resultUrl: '',
     resultMd: '',
-    showResult: false
+    showResult: false,
+    isCopyUrl: false,
+    isCopyMd: false
   },
   methods: {
     onFileChange(e) {
@@ -38,6 +41,17 @@ new Vue({
         return
       }
       localStorage.setItem('domain', this.domain)
+    },
+    onCopyUrl(e) {
+      this.isCopyUrl = true
+      this.isCopyMd = false
+    },
+    onCopyMd(e) {
+      this.isCopyMd = true
+      this.isCopyUrl = false
+    },
+    onError() {
+      
     }
   },
   created() {
