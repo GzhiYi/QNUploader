@@ -1,4 +1,3 @@
-console.log('window', window)
 new Vue({
   el: '#root',
   data: {
@@ -24,20 +23,20 @@ new Vue({
         this.resultUrl = `${this.domain}/${res.key}`
         this.resultMd = `![${res.key.split('.')[0]}](${this.domain}/${res.key})`
         this.showResult = true
+        this.errorMsg = ''
       })
+
     },
     onTokenBlur() {
-      console.log('!!!!')
       this.showTokenError = this.token === '' || this.token === null
-      if(this.showTokenError) {
+      if (this.showTokenError) {
         return
       }
       localStorage.setItem('token', this.token)
     },
     onDomainBlur() {
-      console.log('???')
       this.showDomainError = this.domain === '' || this.token === null
-      if(this.showDomainError) {
+      if (this.showDomainError) {
         return
       }
       localStorage.setItem('domain', this.domain)
@@ -51,7 +50,7 @@ new Vue({
       this.isCopyUrl = false
     },
     onError() {
-      
+
     }
   },
   created() {
