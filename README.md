@@ -22,7 +22,7 @@ git clone git@github.com:GzhiYi/QNUploader.git
 添加到chrome: 菜单-更多工具-扩展程序-加载已解压的扩展程序  
 说明：由于上传不到Chrome商店，支付不到5美元注册开发者的费用，所以只能本地使用。注意每次打开chrome不要关闭这个扩展就行了。
 
-#### 使用前提
+#### 获取字段
 整个扩展只需要一个`UploadToken`以及一个外链默认域名`Domain`即可。  
 关于这两个的获取：
 - `Token`：[在线jsfiddle获取](http://jsfiddle.net/b0zt725o/3/)。获取需要你图床的`accessKey`和`secretKey`以及`bucketName`。`accessKey`和`secretKey`在七牛个人面板的密钥管理处获取，bucketName在对象存储列表处就可以找到了。`deadline`尽量选最长时间，当然，可以修改生成Token的源码增加deadline。
